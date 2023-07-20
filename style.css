@@ -1,0 +1,120 @@
+:root{
+    --header-height:3.5rem;
+
+    /*=================colors================== */
+    --black-color: hsl(220, 24%, 12%);
+    --black-color-light: hsl(220, 24%, 15%);
+    --black-color-lighten: hsl(220, 24%, 18%);
+    --white-color: #fff;
+    --body-color: hsl(220, 24%, 90%);
+
+    /* Fond tipograpy */
+
+    --body-fond : 'Montserrat',sans-serif;
+    --normal-fond-size : .938rem;
+
+    --font-regular : 400;
+    --font-semi-bold:600; 
+
+
+    --z-tooltip:10;
+    --z-fixed:100;
+
+}
+
+
+/* ==================================Base ======================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: var(--body-color);
+    font-family: var(--body-fond);
+    font-size: var(--normal-fond-size);
+}
+
+ul{
+    list-style: none;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+/* =============================Reausables clases================================= */
+
+.container{
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+/* =================================Header========================================= */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--black-color);
+    box-shadow: hsla(220, 32%, 8%, .3);
+    z-index: var(--z-fixed);
+}
+
+/* ====================================nav======================================= */
+
+.nav{
+    height: var(--header-height);
+}
+
+.nav__logo,
+.nav__burger,
+.nav__close{
+ color: var(--white-color);   
+}
+
+.nav__data{
+height: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.nav__logo{
+    display: inline-flex;
+    align-items: center;
+    column-gap: .25rem;
+    font-weight: var(--font-semi-bold);
+}
+
+.nav__logo i{
+    font-weight: initial;
+    font-size: 1.25rem;
+}
+
+.nav__toggle{
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+
+.nav__burger,
+.nav__close{
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    inset: 0;
+    margin: auto;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: opacity .1s transform .4s;
+}
+
+.nav__close{
+    opacity: 0;
+}
